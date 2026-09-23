@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+  <div class="container">
+
+    <!-- Logo / Brand -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/home">
+      <span class="fs-3 me-2"></span>
+      <span class="fw-bold">MyApp</span>
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Menu -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+
+      <!-- Left Menu -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">
+            About
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">
+            ContactUs
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- Right Side - Guest -->
+      <ul class="navbar-nav">
+
+        <li class="nav-item dropdown">
+
+          <a
+            class="nav-link dropdown-toggle d-flex align-items-center"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="fs-5 me-2">👤</span>
+            Guest
+          </a>
+
+          <!-- Guest Dropdown -->
+          <ul class="dropdown-menu dropdown-menu-end shadow">
+
+            <li>
+              <h6 class="dropdown-header">
+                Welcome, Guest
+              </h6>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                🔑 Login
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                📝 Register
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                👤 Profile
+              </a>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item text-danger" href="#">
+                🚪 Logout
+              </a>
+            </li>
+
+          </ul>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</nav>

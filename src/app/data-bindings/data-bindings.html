@@ -1,0 +1,264 @@
+<!-- Data Binding Page -->
+
+<div class="container py-5">
+
+  <!-- Page Heading -->
+  <div class="text-center mb-5">
+
+    <h1 class="fw-bold text-primary">
+      {{ title }}
+    </h1>
+
+    <p class="text-muted">
+      Learn Angular Data Binding with practical examples
+    </p>
+
+  </div>
+
+
+  <!-- ================================= -->
+  <!-- 1. INTERPOLATION -->
+  <!-- ================================= -->
+
+  <div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-primary text-white">
+      <h3 class="mb-0">
+        1. Interpolation
+      </h3>
+    </div>
+
+    <div class="card-body">
+
+      <p>
+        Interpolation is used to display component data
+        inside the HTML template.
+      </p>
+
+      <hr>
+
+      <h5>
+        Student Name:
+        <span class="text-primary">
+          {{ studentName }}
+        </span>
+      </h5>
+
+      <h5>
+        Course:
+        <span class="text-success">
+          {{ course }}
+        </span>
+      </h5>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================================= -->
+  <!-- 2. PROPERTY BINDING -->
+  <!-- ================================= -->
+
+  <div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-success text-white">
+      <h3 class="mb-0">
+        2. Property Binding
+      </h3>
+    </div>
+
+    <div class="card-body">
+
+      <p>
+        Property Binding is used to bind component
+        properties with HTML element properties.
+      </p>
+
+      <hr>
+
+      <!-- Image Property Binding -->
+
+      <h5>Image using Property Binding:</h5>
+
+      <img
+        [src]="imageUrl"
+        alt="Angular Logo"
+        width="100"
+        class="mb-3"
+      >
+
+      <br>
+
+      <!-- Button Property Binding -->
+
+      <button
+        class="btn btn-primary"
+        [disabled]="buttonDisabled">
+
+        Property Binding Button
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================================= -->
+  <!-- 3. EVENT BINDING -->
+  <!-- ================================= -->
+
+  <div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-warning">
+      <h3 class="mb-0">
+        3. Event Binding
+      </h3>
+    </div>
+
+    <div class="card-body">
+
+      <p>
+        Event Binding is used to handle user actions
+        such as click, input, submit, etc.
+      </p>
+
+      <hr>
+
+      <h5>
+        Message:
+        <span class="text-primary">
+          {{ message }}
+        </span>
+      </h5>
+
+      <button
+        class="btn btn-primary me-2"
+        (click)="showmessage()">
+
+        Show Message
+
+      </button>
+
+
+      <hr>
+
+
+      <h5>
+        Counter:
+        <span class="text-success">
+          {{ count }}
+        </span>
+      </h5>
+
+
+      <button
+        class="btn btn-success me-2"
+        (click)="increment()">
+
+        + Increment
+
+      </button>
+
+
+      <button
+        class="btn btn-danger me-2"
+        (click)="decrement()">
+
+        - Decrement
+
+      </button>
+
+
+      <button
+        class="btn btn-secondary"
+        (click)="reset()">
+
+        Reset
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================================= -->
+  <!-- 4. TWO-WAY DATA BINDING -->
+  <!-- ================================= -->
+
+  <div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-danger text-white">
+      <h3 class="mb-0">
+        4. Two-Way Data Binding
+      </h3>
+    </div>
+
+    <div class="card-body">
+
+      <p>
+        Two-Way Data Binding keeps the component data
+        and input field synchronized.
+      </p>
+
+      <hr>
+
+
+      <!-- Username -->
+
+      <div class="mb-3">
+
+        <label class="form-label fw-bold">
+          Enter Username
+        </label>
+
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="username"
+          placeholder="Enter username"
+        >
+
+      </div>
+
+
+      <p>
+        Username:
+        <strong class="text-primary">
+          {{ username }}
+        </strong>
+      </p>
+
+
+      <!-- Email -->
+
+      <div class="mb-3">
+
+        <label class="form-label fw-bold">
+          Enter Email
+        </label>
+
+        <input
+          type="email"
+          class="form-control"
+          [(ngModel)]="email"
+          placeholder="Enter email"
+        >
+
+      </div>
+
+
+      <p>
+        Email:
+        <strong class="text-success">
+          {{ email }}
+        </strong>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
