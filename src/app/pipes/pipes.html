@@ -1,0 +1,116 @@
+<div class="container mt-4">
+
+  <h2 class="text-primary mb-3">Angular Pipes</h2>
+
+  <p class="lead">
+    Pipes are used to transform data before displaying it in the HTML template.
+  </p>
+
+  <!-- Uppercase -->
+  <div class="card mb-3">
+    <div class="card-body">
+      <h4>1. Uppercase Pipe</h4>
+
+      <p><strong>Original:</strong> hello angular</p>
+
+      <p>
+        <strong>Output:</strong>
+        {{ 'hello angular' | uppercase }}
+      </p>
+
+      <code>{{ 'hello angular' | uppercase }}</code>
+    </div>
+  </div>
+
+  <!-- Lowercase -->
+  <div class="card mb-3">
+    <div class="card-body">
+      <h4>2. Lowercase Pipe</h4>
+
+      <p><strong>Original:</strong> HELLO ANGULAR</p>
+
+      <p>
+        <strong>Output:</strong>
+        {{ 'HELLO ANGULAR' | lowercase }}
+      </p>
+
+      <code>{{ 'HELLO ANGULAR' | lowercase }}</code>
+    </div>
+  </div>
+
+  <!-- Titlecase -->
+  <div class="card mb-3">
+    <div class="card-body">
+      <h4>3. Titlecase Pipe</h4>
+
+      <p>
+        <strong>Output:</strong>
+        {{ 'angular pipes tutorial' | titlecase }}
+      </p>
+
+      <code>{{ 'angular pipes tutorial' | titlecase }}</code>
+    </div>
+  </div>
+
+  <!-- Date -->
+  <div class="card mb-3">
+    <div class="card-body">
+      <h4>4. Date Pipe</h4>
+
+      <p>
+        <strong>Current Date:</strong>
+        {{ today | date }}
+      </p>
+
+      <p>
+        <strong>Formatted Date:</strong>
+        {{ today | date:'dd/MM/yyyy' }}
+      </p>
+
+      <code>{{ today | date:'dd/MM/yyyy' }}</code>
+    </div>
+  </div>
+
+  <!-- Currency -->
+  <div class="card mb-3">
+    <div class="card-body">
+      <h4>5. Currency Pipe</h4>
+
+      <p>
+        <strong>Price:</strong>
+        {{ price | currency:'INR' }}
+      </p>
+
+      <code>{{ price | currency:'INR' }}</code>
+    </div>
+  </div>
+
+  <!-- Number -->
+  <div class="card mb-3">
+    <div class="card-body">
+      <h4>6. Number Pipe</h4>
+
+      <p>
+        <strong>Number:</strong>
+        {{ numberValue | number:'1.2-2' }}
+      </p>
+
+      <code>{{ numberValue | number:'1.2-2' }}</code>
+    </div>
+  </div>
+
+  <!-- Percent -->
+  <div class="card mb-3">
+    <div class="card-body">
+      <h4>7. Percent Pipe</h4>
+
+      <p>
+        <strong>Percentage:</strong>
+        {{ percentage | percent }}
+      </p>
+
+      <code>{{ percentage | percent }}</code>
+    </div>
+  </div>
+
+</div>

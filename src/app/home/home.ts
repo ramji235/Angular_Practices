@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { DataBindings } from '../data-bindings/data-bindings';
 import { AngularDirectives } from '../angular-directives/angular-directives';
+import { Pipes } from '../pipes/pipes';
+
 @Component({
   selector: 'app-home',
   imports: [FormsModule, RouterLink],

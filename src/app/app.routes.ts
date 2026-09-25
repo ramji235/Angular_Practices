@@ -4,6 +4,7 @@ import { About } from './about/about';
 import { Contactus } from './contactus/contactus';
 import { DataBindings } from './data-bindings/data-bindings';
 import { AngularDirectives } from './angular-directives/angular-directives';
+import { Pipes } from './pipes/pipes';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path: 'AngularDirectives',
         component: AngularDirectives
+    },
+    {
+        path: 'pipes',
+        component: Pipes
     }
 ];
