@@ -5,6 +5,7 @@ import { Contactus } from './contactus/contactus';
 import { DataBindings } from './data-bindings/data-bindings';
 import { AngularDirectives } from './angular-directives/angular-directives';
 import { Pipes } from './pipes/pipes';
+import { UserCard } from './components/user-card/user-card';
 
 export const routes: Routes = [
     {
@@ -35,5 +36,9 @@ export const routes: Routes = [
     {
         path: 'pipes',
         component: Pipes
+    },
+    {
+        path: 'UserCard',
+        component: UserCard
     }
 ];

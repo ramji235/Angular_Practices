@@ -1,0 +1,23 @@
+<div class="user-card">
+
+  <div class="avatar">
+    {{ name.charAt(0) }}
+  </div>
+
+  <h2>{{ name }}</h2>
+
+  <p class="role">{{ role }}</p>
+
+  <button (click)="toggleDetails()">
+    {{ showDetails ? 'Hide Details' : 'Show Details' }}
+  </button>
+
+  @if (showDetails) {
+    <div class="details">
+      <p><strong>Name:</strong> {{ name }}</p>
+      <p><strong>Role:</strong> {{ role }}</p>
+      <p><strong>Experience:</strong> {{ experience }} years</p>
+    </div>
+  }
+
+</div>
