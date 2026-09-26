@@ -7,6 +7,7 @@ import { AngularDirectives } from './angular-directives/angular-directives';
 import { Pipes } from './pipes/pipes';
 import { UserCard } from './components/user-card/user-card';
 import { Templates } from './templates/templates';
+import { LifeCycles } from './life-cycles/life-cycles';
 
 export const routes: Routes = [
     {
@@ -45,5 +46,9 @@ export const routes: Routes = [
     {
         path: 'Templates',
         component: Templates
+    },
+    {
+        path: 'LifeCycles',
+        component: LifeCycles
     }
 ];
