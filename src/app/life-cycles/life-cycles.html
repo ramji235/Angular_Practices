@@ -1,1 +1,110 @@
-<p>life-cycles works!</p>
+<div class="page">
+
+  <div class="header">
+    <h1>Angular Component Lifecycle</h1>
+    <p>Interactive UI Practice</p>
+  </div>
+
+  @if (componentCreated) {
+
+    <div class="card">
+
+      <div class="profile">
+
+        <div class="avatar">
+          {{ userName.charAt(0) }}
+        </div>
+
+        <div>
+          <h2>{{ userName }}</h2>
+          <p>Angular Lifecycle Practice Component</p>
+        </div>
+
+      </div>
+
+      <div class="counter-box">
+
+        <h3>Change Detection Practice</h3>
+
+        <div class="counter">
+          {{ counter }}
+        </div>
+        
+        <button (click)="increaseCounter()">
+          Increase Counter
+        </button>
+        <button (click)="decreaseCounter()">Decrease Counter</button>
+
+      </div>
+
+      <div class="actions">
+
+        <button
+          class="primary"
+          (click)="changeName()">
+
+          Change &#64;Input Value
+
+        </button>
+
+        <button
+          class="danger"
+          (click)="destroyComponent()">
+
+          Destroy Component
+
+        </button>
+
+      </div>
+
+      <div class="lifecycle">
+
+        <h2>Lifecycle Status</h2>
+
+        @for (status of lifecycleStatus; track $index) {
+
+          <div class="hook">
+
+            <span class="number">
+              {{ $index + 1 }}
+            </span>
+
+            <span>
+              {{ status }}
+            </span>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  } @else {
+
+    <div class="destroyed">
+
+      <div class="destroy-icon">
+        ✕
+      </div>
+
+      <h2>Component Destroyed</h2>
+
+      <p>
+        Component is currently hidden.
+      </p>
+
+      <button
+        class="primary"
+        (click)="recreateComponent()">
+
+        Recreate Component
+
+      </button>
+
+    </div>
+
+  }
+
+</div>
