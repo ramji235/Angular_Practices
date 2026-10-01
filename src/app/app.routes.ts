@@ -8,6 +8,8 @@ import { Pipes } from './pipes/pipes';
 import { UserCard } from './components/user-card/user-card';
 import { Templates } from './templates/templates';
 import { LifeCycles } from './life-cycles/life-cycles';
+import { Students } from './services/students';
+import { Student } from './student/student';
 
 export const routes: Routes = [
     {
@@ -50,5 +52,9 @@ export const routes: Routes = [
     {
         path: 'LifeCycles',
         component: LifeCycles
+    },
+    {
+        path: 'Student',
+        component: Student
     }
 ];
