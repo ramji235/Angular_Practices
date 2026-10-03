@@ -1,1 +1,417 @@
-<p>student works!</p>
+<div class="services-page">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+
+    <div class="sidebar-header">
+      <div class="logo">AS</div>
+
+      <div>
+        <h2>Angular Services</h2>
+        <span>Practice Dashboard</span>
+      </div>
+    </div>
+
+    <div class="menu-title">
+      SERVICE TYPES
+    </div>
+
+    <nav class="service-menu">
+
+      <button class="menu-item active">
+        <span class="icon">⚙️</span>
+        <span>Basic Service</span>
+      </button>
+
+      <button class="menu-item" routerLink="/Dataservice">
+        <span class="icon">📦</span>
+        <span>Data Service</span>
+      </button>
+
+      <button class="menu-item">
+        <span class="icon">🔢</span>
+        <span>Counter Service</span>
+      </button>
+
+      <button class="menu-item">
+        <span class="icon">👨‍🎓</span>
+        <span>Student Service</span>
+      </button>
+
+      <button class="menu-item">
+        <span class="icon">🔐</span>
+        <span>Auth Service</span>
+      </button>
+
+      <button class="menu-item">
+        <span class="icon">🛠️</span>
+        <span>Utility Service</span>
+      </button>
+
+      <button class="menu-item">
+        <span class="icon">🌐</span>
+        <span>API Service</span>
+      </button>
+
+      <button class="menu-item">
+        <span class="icon">🔄</span>
+        <span>Observable Service</span>
+      </button>
+
+      <button class="menu-item">
+        <span class="icon">💾</span>
+        <span>LocalStorage Service</span>
+      </button>
+
+      <button class="menu-item">
+        <span class="icon">💉</span>
+        <span>Dependency Injection</span>
+      </button>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="progress-label">
+        <span>Practice Progress</span>
+        <strong>1 / 10</strong>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+
+  </aside>
+
+
+  <!-- ================= MAIN CONTENT ================= -->
+
+  <main class="main-content">
+
+    <!-- TOP HEADER -->
+
+    <header class="top-header">
+
+      <div>
+        <p class="breadcrumb">Angular / Services</p>
+
+        <h1>Angular Services Practice</h1>
+
+        <p class="subtitle">
+          Learn and practice different types of Angular Services
+          through interactive examples.
+        </p>
+      </div>
+
+      <div class="header-badge">
+        <span class="status-dot"></span>
+        Practice Mode
+      </div>
+
+    </header>
+
+
+    <!-- ================= SERVICE OVERVIEW ================= -->
+
+    <section class="overview">
+
+      <div class="overview-card">
+        <div class="overview-icon blue">⚙️</div>
+
+        <div>
+          <span>Current Topic</span>
+          <h3>Basic Service</h3>
+        </div>
+      </div>
+
+      <div class="overview-card">
+        <div class="overview-icon green">📚</div>
+
+        <div>
+          <span>Total Services</span>
+          <h3>10 Concepts</h3>
+        </div>
+      </div>
+
+      <div class="overview-card">
+        <div class="overview-icon orange">🎯</div>
+
+        <div>
+          <span>Completed</span>
+          <h3>1 / 10</h3>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ================= PRACTICE AREA ================= -->
+
+    <section class="practice-container">
+
+      <div class="practice-header">
+
+        <div>
+          <span class="section-label">CURRENT PRACTICE</span>
+
+          <h2>
+            Basic Service
+          </h2>
+
+          <p>
+            Create a simple Angular service and use its methods
+            inside a component.
+          </p>
+        </div>
+
+        <div class="concept-number">
+          01
+        </div>
+
+      </div>
+
+
+      <!-- ================= EXAMPLE ================= -->
+
+      <div class="example-section">
+
+        <div class="example-title">
+          <span>💡</span>
+
+          <div>
+            <h3>Service Example</h3>
+
+            <p>
+              Click the button to call a method from the Angular service.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="demo-box">
+
+          <div class="demo-result">
+
+            <span class="result-label">
+              SERVICE RESPONSE
+            </span>
+
+            <h2>
+              Hello from Angular Service!
+            </h2>
+
+            <p>
+              This message is coming from
+              <strong>BasicService</strong>.
+            </p>
+
+          </div>
+
+
+          <div class="demo-actions">
+
+            <button class="primary-btn">
+              ⚡ Call Service
+            </button>
+
+            <button class="secondary-btn">
+              🔄 Reset
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= CODE CONCEPT ================= -->
+
+      <div class="concept-grid">
+
+        <div class="concept-card">
+
+          <div class="card-icon">
+            📄
+          </div>
+
+          <h3>Service</h3>
+
+          <p>
+            Contains reusable business logic and common methods.
+          </p>
+
+          <span class="file-name">
+            basic.service.ts
+          </span>
+
+        </div>
+
+
+        <div class="concept-card">
+
+          <div class="card-icon">
+            🧩
+          </div>
+
+          <h3>Component</h3>
+
+          <p>
+            Injects the service and uses its methods.
+          </p>
+
+          <span class="file-name">
+            services.component.ts
+          </span>
+
+        </div>
+
+
+        <div class="concept-card">
+
+          <div class="card-icon">
+            🎨
+          </div>
+
+          <h3>Template</h3>
+
+          <p>
+            Displays the data returned by the service.
+          </p>
+
+          <span class="file-name">
+            services.html
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= LEARNING FLOW ================= -->
+
+      <div class="flow-section">
+
+        <div class="flow-header">
+
+          <h3>How Service Works</h3>
+
+          <span>
+            Basic Flow
+          </span>
+
+        </div>
+
+
+        <div class="flow">
+
+          <div class="flow-item">
+
+            <div class="flow-circle">
+              1
+            </div>
+
+            <h4>Component</h4>
+
+            <p>
+              User clicks button
+            </p>
+
+          </div>
+
+
+          <div class="flow-arrow">
+            →
+          </div>
+
+
+          <div class="flow-item">
+
+            <div class="flow-circle">
+              2
+            </div>
+
+            <h4>Dependency Injection</h4>
+
+            <p>
+              Angular provides service
+            </p>
+
+          </div>
+
+
+          <div class="flow-arrow">
+            →
+          </div>
+
+
+          <div class="flow-item">
+
+            <div class="flow-circle">
+              3
+            </div>
+
+            <h4>Service</h4>
+
+            <p>
+              Method executes
+            </p>
+
+          </div>
+
+
+          <div class="flow-arrow">
+            →
+          </div>
+
+
+          <div class="flow-item">
+
+            <div class="flow-circle">
+              4
+            </div>
+
+            <h4>Result</h4>
+
+            <p>
+              UI gets updated
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= NEXT PRACTICE ================= -->
+
+      <div class="next-section">
+
+        <div>
+
+          <span>
+            NEXT PRACTICE
+          </span>
+
+          <h3>
+            Data Service
+          </h3>
+
+          <p>
+            Learn how to store and share data using a service.
+          </p>
+
+        </div>
+
+        <button class="next-btn">
+          Next Service →
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>

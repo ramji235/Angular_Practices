@@ -1,0 +1,339 @@
+<div class="data-service-practice">
+
+  <!-- Header -->
+
+  <div class="practice-header">
+
+    <div>
+
+      <span class="section-label">
+        SERVICE PRACTICE
+      </span>
+
+      <h2>Data Service</h2>
+
+      <p>
+        Store, retrieve, add and delete data using
+        an Angular Service.
+      </p>
+
+    </div>
+
+    <div class="concept-number">
+      02
+    </div>
+
+  </div>
+
+
+  <!-- Service Information -->
+
+  <div class="data-info">
+
+    <div class="info-card">
+
+      <span>Service</span>
+
+      <strong>DataService</strong>
+
+    </div>
+
+
+    <div class="info-card">
+
+      <span>Total Students</span>
+
+      <strong>
+        {{ students.length }}
+      </strong>
+
+    </div>
+
+
+    <div class="info-card">
+
+      <span>Data Source</span>
+
+      <strong>Service Array</strong>
+
+    </div>
+
+  </div>
+
+
+  <!-- Actions -->
+
+  <div class="data-actions">
+
+    <button
+      class="primary-btn"
+      (click)="loadStudents()">
+
+      🔄 Load Data
+
+    </button>
+
+
+    <button
+      class="secondary-btn"
+      (click)="addStudent()">
+
+      ➕ Add Student
+
+    </button>
+
+  </div>
+
+
+  <!-- Student Table -->
+
+  <div class="student-table-container">
+
+    <div class="table-header">
+
+      <div>
+
+        <h3>Student Data</h3>
+
+        <p>
+          Data is coming from DataService
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <table>
+
+      <thead>
+
+        <tr>
+
+          <th>ID</th>
+
+          <th>Name</th>
+
+          <th>Course</th>
+
+          <th>Marks</th>
+
+          <th>Action</th>
+
+        </tr>
+
+      </thead>
+
+
+      <tbody>
+
+        @for (student of students; track student.id) {
+
+          <tr>
+
+            <td>
+              {{ student.id }}
+            </td>
+
+            <td>
+              <strong>
+                {{ student.name }}
+              </strong>
+            </td>
+
+            <td>
+
+              <span class="course-badge">
+                {{ student.course }}
+              </span>
+
+            </td>
+
+            <td>
+              {{ student.marks }}
+            </td>
+
+            <td>
+
+              <button
+                class="delete-btn"
+                (click)="deleteStudent(student.id)">
+
+                Delete
+
+              </button>
+
+            </td>
+
+          </tr>
+
+        }
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+
+  <!-- Selected Student -->
+
+  @if (selectedStudent) {
+
+    <div class="selected-student">
+
+      <span>
+        SELECTED STUDENT
+      </span>
+
+      <h3>
+        {{ selectedStudent.name }}
+      </h3>
+
+      <p>
+        Course:
+        {{ selectedStudent.course }}
+      </p>
+
+      <p>
+        Marks:
+        {{ selectedStudent.marks }}
+      </p>
+
+    </div>
+
+  }
+
+
+  <!-- Find Student -->
+
+  <div class="find-student">
+
+    <h3>Find Student by ID</h3>
+
+    <p>
+      Try getting a specific student from the service.
+    </p>
+
+
+    <div class="find-actions">
+
+      <button
+        class="secondary-btn"
+        (click)="findStudent(1)">
+
+        Find Student #1
+
+      </button>
+
+
+      <button
+        class="secondary-btn"
+        (click)="findStudent(2)">
+
+        Find Student #2
+
+      </button>
+
+
+      <button
+        class="secondary-btn"
+        (click)="findStudent(3)">
+
+        Find Student #3
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Learning Flow -->
+
+  <div class="data-flow">
+
+    <h3>Data Service Flow</h3>
+
+
+    <div class="flow">
+
+      <div class="flow-item">
+
+        <div class="flow-circle">
+          1
+        </div>
+
+        <h4>Component</h4>
+
+        <p>
+          Calls service
+        </p>
+
+      </div>
+
+
+      <div class="flow-arrow">
+        →
+      </div>
+
+
+      <div class="flow-item">
+
+        <div class="flow-circle">
+          2
+        </div>
+
+        <h4>DataService</h4>
+
+        <p>
+          Stores data
+        </p>
+
+      </div>
+
+
+      <div class="flow-arrow">
+        →
+      </div>
+
+
+      <div class="flow-item">
+
+        <div class="flow-circle">
+          3
+        </div>
+
+        <h4>Method</h4>
+
+        <p>
+          getStudents()
+        </p>
+
+      </div>
+
+
+      <div class="flow-arrow">
+        →
+      </div>
+
+
+      <div class="flow-item">
+
+        <div class="flow-circle">
+          4
+        </div>
+
+        <h4>UI</h4>
+
+        <p>
+          Displays data
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

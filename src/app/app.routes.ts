@@ -10,6 +10,7 @@ import { Templates } from './templates/templates';
 import { LifeCycles } from './life-cycles/life-cycles';
 import { Students } from './services/students';
 import { Student } from './student/student';
+import { Dataservice } from './student/dataservice/dataservice';
 
 export const routes: Routes = [
     {
@@ -56,5 +57,9 @@ export const routes: Routes = [
     {
         path: 'Student',
         component: Student
+    },
+    {
+        path:'Dataservice',
+        component: Dataservice
     }
 ];
