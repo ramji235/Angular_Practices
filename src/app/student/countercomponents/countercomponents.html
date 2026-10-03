@@ -1,0 +1,282 @@
+<div class="counter-practice">
+
+  <div class="practice-header">
+
+    <div>
+      <span class="section-label">
+        ANGULAR SERVICE PRACTICE
+      </span>
+
+      <h2>Counter Service</h2>
+
+      <p>
+        Practice how an Angular Service can manage
+        and share counter data with a component.
+      </p>
+    </div>
+
+    <div class="concept-number">
+      03
+    </div>
+
+  </div>
+
+
+  <!-- Counter Card -->
+
+  <div class="counter-card">
+
+    <span class="counter-label">
+      CURRENT COUNT
+    </span>
+
+    <div class="count-display">
+      {{ count }}
+    </div>
+
+    <p class="counter-info">
+      Counter value is managed by
+      <strong>CounterService</strong>.
+    </p>
+
+
+    <!-- Buttons -->
+
+    <div class="counter-actions">
+
+      <button
+        class="decrement-btn"
+        (click)="decrementCount()">
+        − Decrement
+      </button>
+
+      <button
+        class="reset-btn"
+        (click)="resetCount()">
+        🔄 Reset
+      </button>
+
+      <button
+        class="increment-btn"
+        (click)="incrementCount()">
+        + Increment
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Service Information -->
+
+  <div class="service-info">
+
+    <div class="info-card">
+
+      <span>Service</span>
+
+      <strong>
+        CounterService
+      </strong>
+
+    </div>
+
+    <div class="info-card">
+
+      <span>Current Value</span>
+
+      <strong>
+        {{ count }}
+      </strong>
+
+    </div>
+
+    <div class="info-card">
+
+      <span>Methods</span>
+
+      <strong>
+        4 Methods
+      </strong>
+
+    </div>
+
+  </div>
+
+
+  <!-- Methods -->
+
+  <div class="methods-section">
+
+    <span class="section-label">
+      SERVICE METHODS
+    </span>
+
+    <h3>
+      CounterService Methods
+    </h3>
+
+    <div class="methods-grid">
+
+      <div class="method-card">
+
+        <span class="method-icon">
+          ➕
+        </span>
+
+        <h4>increment()</h4>
+
+        <p>
+          Increases the counter value by 1.
+        </p>
+
+      </div>
+
+
+      <div class="method-card">
+
+        <span class="method-icon">
+          ➖
+        </span>
+
+        <h4>decrement()</h4>
+
+        <p>
+          Decreases the counter value by 1.
+        </p>
+
+      </div>
+
+
+      <div class="method-card">
+
+        <span class="method-icon">
+          🔄
+        </span>
+
+        <h4>reset()</h4>
+
+        <p>
+          Resets the counter value to 0.
+        </p>
+
+      </div>
+
+
+      <div class="method-card">
+
+        <span class="method-icon">
+          🔢
+        </span>
+
+        <h4>getCount()</h4>
+
+        <p>
+          Returns the current counter value.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Data Flow -->
+
+  <div class="flow-section">
+
+    <div class="flow-header">
+
+      <h3>
+        How Counter Service Works
+      </h3>
+
+      <span>
+        Service Flow
+      </span>
+
+    </div>
+
+
+    <div class="flow">
+
+      <div class="flow-item">
+
+        <div class="flow-circle">
+          1
+        </div>
+
+        <h4>Component</h4>
+
+        <p>
+          User clicks button
+        </p>
+
+      </div>
+
+
+      <div class="flow-arrow">
+        →
+      </div>
+
+
+      <div class="flow-item">
+
+        <div class="flow-circle">
+          2
+        </div>
+
+        <h4>CounterService</h4>
+
+        <p>
+          Method executes
+        </p>
+
+      </div>
+
+
+      <div class="flow-arrow">
+        →
+      </div>
+
+
+      <div class="flow-item">
+
+        <div class="flow-circle">
+          3
+        </div>
+
+        <h4>Count Updated</h4>
+
+        <p>
+          Service changes value
+        </p>
+
+      </div>
+
+
+      <div class="flow-arrow">
+        →
+      </div>
+
+
+      <div class="flow-item">
+
+        <div class="flow-circle">
+          4
+        </div>
+
+        <h4>UI</h4>
+
+        <p>
+          New value displayed
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

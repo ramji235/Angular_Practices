@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Students } from '../../services/students';
-// import { Student } from '../student';
+
 @Component({
   selector: 'app-dataservice',
-  imports: [],
   templateUrl: './dataservice.html',
   styleUrl: './dataservice.css'
 })
 export class Dataservice {
+
   students: any[] = [];
   selectedStudent: any = null;
 
@@ -15,21 +15,61 @@ export class Dataservice {
     this.loadStudents();
   }
 
+  // ================================
+  // LOAD ALL STUDENTS
+  // ================================
   loadStudents() {
-    this.students = this.studentsService.getStudent();
+
+    this.students = this.studentsService.getStudents();
   }
 
+
+  // ================================
+  // FIND STUDENT
+  // ================================
   findStudent(id: number) {
-    this.selectedStudent = this.studentsService.getStudentById(id) ?? null;
+
+    this.selectedStudent =
+      this.studentsService.getStudent(id);
   }
 
+
+  // ================================
+  // ADD STUDENT
+  // ================================
   addStudent() {
-    this.studentsService.addStudent('roshan', 'angular', 89);
+
+    this.studentsService.addStudent(
+      'Neha',
+      'Angular',
+      88
+    );
+
     this.loadStudents();
   }
 
+
+  // ================================
+  // DELETE STUDENT
+  // ================================
   deleteStudent(id: number) {
-    this.studentsService.deleteStudents(id);
+
+    this.studentsService.deleteStudent(id);
+
+    this.loadStudents();
+
+    // Agar deleted student selected tha
+    if (this.selectedStudent?.id === id) {
+      this.selectedStudent = null;
+    }
+  }
+
+
+  // ================================
+  // REFRESH DATA
+  // ================================
+  refreshData() {
+
     this.loadStudents();
   }
 }

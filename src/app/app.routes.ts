@@ -11,6 +11,7 @@ import { LifeCycles } from './life-cycles/life-cycles';
 import { Students } from './services/students';
 import { Student } from './student/student';
 import { Dataservice } from './student/dataservice/dataservice';
+import { Countercomponents } from './student/countercomponents/countercomponents';
 
 export const routes: Routes = [
     {
@@ -61,5 +62,9 @@ export const routes: Routes = [
     {
         path:'Dataservice',
         component: Dataservice
+    },
+    {
+        path: 'Countercomponents',
+        component: Countercomponents
     }
 ];

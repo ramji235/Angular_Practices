@@ -1,0 +1,314 @@
+.counter-practice {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  color: #1e293b;
+}
+
+.practice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.practice-header h2 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.practice-header p {
+  margin: 10px 0 0;
+  color: #64748b;
+}
+
+.concept-number {
+  font-size: 55px;
+  font-weight: 800;
+  color: #e2e8f0;
+}
+
+
+/* Counter */
+
+.counter-card {
+  padding: 40px 25px;
+  text-align: center;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  margin-bottom: 25px;
+}
+
+.counter-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #64748b;
+}
+
+.count-display {
+  margin: 15px 0;
+  font-size: 80px;
+  line-height: 1;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.counter-info {
+  color: #64748b;
+}
+
+.counter-info strong {
+  color: #334155;
+}
+
+
+/* Buttons */
+
+.counter-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.counter-actions button {
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.counter-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.decrement-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.reset-btn {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.increment-btn {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+
+/* Information */
+
+.service-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.info-card {
+  padding: 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.info-card span {
+  display: block;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 7px;
+}
+
+.info-card strong {
+  font-size: 18px;
+}
+
+
+/* Methods */
+
+.methods-section {
+  padding: 25px;
+  margin-bottom: 25px;
+  background: #f8fafc;
+  border-radius: 16px;
+}
+
+.methods-section h3 {
+  margin: 0 0 20px;
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.method-card {
+  padding: 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.method-icon {
+  font-size: 25px;
+}
+
+.method-card h4 {
+  margin: 12px 0 7px;
+}
+
+.method-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+
+/* Flow */
+
+.flow-section {
+  padding: 25px;
+  background: #0f172a;
+  border-radius: 16px;
+  color: white;
+}
+
+.flow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.flow-header h3 {
+  margin: 0;
+}
+
+.flow-header span {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.flow-item {
+  min-width: 150px;
+  text-align: center;
+}
+
+.flow-circle {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #1e293b;
+  border: 1px solid #475569;
+  font-weight: 700;
+}
+
+.flow-item h4 {
+  margin: 5px 0;
+}
+
+.flow-item p {
+  margin: 0;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.flow-arrow {
+  font-size: 25px;
+  color: #94a3b8;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+  .service-info {
+    grid-template-columns: 1fr;
+  }
+
+  .methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counter-actions {
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .counter-practice {
+    padding: 20px 12px;
+  }
+
+  .practice-header {
+    align-items: flex-start;
+  }
+
+  .practice-header h2 {
+    font-size: 28px;
+  }
+
+  .concept-number {
+    font-size: 40px;
+  }
+
+  .count-display {
+    font-size: 65px;
+  }
+
+  .counter-actions {
+    flex-direction: column;
+  }
+
+  .counter-actions button {
+    width: 100%;
+  }
+
+  .methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow {
+    flex-direction: column;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+
+}

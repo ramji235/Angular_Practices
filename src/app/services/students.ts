@@ -5,70 +5,62 @@ import { Injectable } from '@angular/core';
 })
 export class Students {
 
-  //data service
   private students = [
     {
       id: 1,
-      name: 'Pushpendra Mishra',
+      name: 'Rahul',
       course: 'Angular',
       marks: 85
     },
-
     {
       id: 2,
-      name: 'Manorama',
+      name: 'Amit',
       course: 'React',
-      marks: 88
+      marks: 78
     },
-
     {
       id: 3,
-      name: 'Ramji Mishra',
-      course: 'ASP .NET Core',
-      marks: 98
-    },
-
-    {
-      id: 4,
-      name: 'shivesh gupta',
-      course: 'History',
-      marks: 89
+      name: 'Priya',
+      course: 'Angular',
+      marks: 92
     }
   ];
 
-  constructor() { }
+  constructor() {}
 
-  //get all students
-  getStudent(){
+  // Get all students
+  getStudents() {
     return this.students;
   }
 
-  //get students by id
-  getStudentById(Id: number){
-    return this.students.find(students => students.id === Id)
+  // Get student by ID
+  getStudent(id: number) {
+    return this.students.find(student => student.id === id);
   }
 
+  // Add student
+  addStudent(name: string, course: string, marks: number) {
 
-  //add students
-  addStudent(name: string, course: string, marks: number){
     const newStudent = {
       id: this.students.length + 1,
       name: name,
       course: course,
       marks: marks
     };
+
     this.students.push(newStudent);
   }
 
+  // Delete student
+  deleteStudent(id: number) {
 
-  //delete students
-  deleteStudents(id: number){
-    this.students = this.students.filter(student => student.id !== id);
+    this.students = this.students.filter(
+      student => student.id !== id
+    );
   }
 
-
-  //get total students
-  getTotalStudents(){
+  // Total students
+  getTotalStudents() {
     return this.students.length;
   }
 }
