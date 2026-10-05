@@ -8,10 +8,10 @@ import { Pipes } from './pipes/pipes';
 import { UserCard } from './components/user-card/user-card';
 import { Templates } from './templates/templates';
 import { LifeCycles } from './life-cycles/life-cycles';
-import { Students } from './services/students';
 import { Student } from './student/student';
 import { Dataservice } from './student/dataservice/dataservice';
 import { Countercomponents } from './student/countercomponents/countercomponents';
+import { Authservice as AuthserviceComponent } from './auths/authservice/authservice';
 
 export const routes: Routes = [
     {
@@ -66,5 +66,9 @@ export const routes: Routes = [
     {
         path: 'Countercomponents',
         component: Countercomponents
+    }, 
+    {
+        path: 'Authservice',
+        component: AuthserviceComponent
     }
 ];

@@ -1,0 +1,286 @@
+<div class="auth-page">
+
+  <div class="auth-header">
+    <div>
+      <span class="section-label">AUTH SERVICE PRACTICE</span>
+
+      <h1>Authentication Service</h1>
+
+      <p>
+        Practice login, logout and authentication state
+        using an Angular Service.
+      </p>
+    </div>
+
+    <div class="auth-status">
+      <span
+        class="status-dot"
+        [class.logged]="isLoggedIn()">
+      </span>
+
+      {{ isLoggedIn() ? 'Authenticated' : 'Not Authenticated' }}
+    </div>
+  </div>
+
+
+  <div class="auth-grid">
+
+    <!-- LOGIN CARD -->
+
+    <div class="auth-card">
+
+      <div class="card-icon">
+        🔐
+      </div>
+
+      <h2>Login</h2>
+
+      <p class="card-description">
+        Enter credentials to authenticate the user.
+      </p>
+
+
+      @if (!isLoggedIn()) {
+
+        <div class="form-group">
+
+          <label>Username</label>
+
+          <input
+            type="text"
+            [(ngModel)]="username"
+            placeholder="Enter username"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Password</label>
+
+          <input
+            type="password"
+            [(ngModel)]="password"
+            placeholder="Enter password"
+          >
+
+        </div>
+
+
+        <button
+          class="login-btn"
+          (click)="login()">
+
+          🔑 Login
+
+        </button>
+
+        <div class="demo-info">
+
+          <strong>Demo Credentials</strong>
+
+          <span>Username: admin</span>
+          <span>Password: admin1234</span>
+
+        </div>
+
+      }
+
+
+      @if (isLoggedIn()) {
+
+        <div class="logged-user">
+
+          <div class="user-avatar">
+            {{ getCurrentUsername().charAt(0).toUpperCase() }}
+          </div>
+
+          <div>
+            <span>Welcome back</span>
+
+            <h3>
+              {{ getCurrentUsername() }}
+            </h3>
+          </div>
+
+        </div>
+
+
+        <button
+          class="logout-btn"
+          (click)="logout()">
+
+          🚪 Logout
+
+        </button>
+
+      }
+
+
+      @if (message) {
+
+        <div
+          class="message"
+          [class.success]="messageType === 'success'"
+          [class.error]="messageType === 'error'">
+
+          {{ message }}
+
+        </div>
+
+      }
+
+    </div>
+
+
+    <!-- CONCEPT CARD -->
+
+    <div class="concept-card">
+
+      <div class="concept-header">
+
+        <span>🧠</span>
+
+        <div>
+          <h2>How Auth Service Works</h2>
+
+          <p>
+            Authentication logic stays inside the service.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="auth-flow">
+
+        <div class="flow-step">
+
+          <div class="flow-number">
+            1
+          </div>
+
+          <div>
+            <h3>User Login</h3>
+
+            <p>
+              User enters username and password.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="flow-line"></div>
+
+
+        <div class="flow-step">
+
+          <div class="flow-number">
+            2
+          </div>
+
+          <div>
+            <h3>Component</h3>
+
+            <p>
+              Component calls AuthService.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="flow-line"></div>
+
+
+        <div class="flow-step">
+
+          <div class="flow-number">
+            3
+          </div>
+
+          <div>
+            <h3>AuthService</h3>
+
+            <p>
+              Service validates credentials.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="flow-line"></div>
+
+
+        <div class="flow-step">
+
+          <div class="flow-number">
+            4
+          </div>
+
+          <div>
+            <h3>Authentication State</h3>
+
+            <p>
+              UI changes according to login status.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- METHODS -->
+
+  <div class="methods-card">
+
+    <div class="methods-title">
+
+      <span>⚙️</span>
+
+      <div>
+        <h2>AuthService Methods</h2>
+
+        <p>
+          These methods are currently being practiced.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="methods-grid">
+
+      <div class="method">
+        <code>login()</code>
+        <span>Authenticate user</span>
+      </div>
+
+      <div class="method">
+        <code>logout()</code>
+        <span>End user session</span>
+      </div>
+
+      <div class="method">
+        <code>isLoggedIn()</code>
+        <span>Check authentication</span>
+      </div>
+
+      <div class="method">
+        <code>getUsername()</code>
+        <span>Get current user</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
