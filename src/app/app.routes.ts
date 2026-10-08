@@ -12,6 +12,7 @@ import { Student } from './student/student';
 import { Dataservice } from './student/dataservice/dataservice';
 import { Countercomponents } from './student/countercomponents/countercomponents';
 import { Authservice as AuthserviceComponent } from './auths/authservice/authservice';
+import { Utilityservice } from './utilityservice/utilityservice';
 
 export const routes: Routes = [
     {
@@ -70,5 +71,9 @@ export const routes: Routes = [
     {
         path: 'Authservice',
         component: AuthserviceComponent
-    }
+    },
+   {
+    path: 'Utilityservice',
+    component: Utilityservice
+   }
 ];

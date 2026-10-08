@@ -1,0 +1,216 @@
+<div class="utility-page">
+
+  <!-- Header -->
+  <div class="page-header">
+
+    <div>
+      <span class="section-label">ANGULAR SERVICES PRACTICE</span>
+
+      <h1>Utility Service</h1>
+
+      <p>
+        Practice reusable utility functions using
+        Angular Dependency Injection.
+      </p>
+    </div>
+
+    <div class="service-icon">
+      🛠️
+    </div>
+
+  </div>
+
+
+  <!-- Main Grid -->
+  <div class="utility-grid">
+
+    <!-- String Utility -->
+    <div class="utility-card">
+
+      <div class="card-header">
+        <div class="card-icon">🔤</div>
+
+        <div>
+          <h2>String Utility</h2>
+          <p>Practice reusable string functions.</p>
+        </div>
+      </div>
+
+      <label>Enter Text</label>
+
+      <input
+        type="text"
+        [(ngModel)]="textValue"
+        placeholder="Enter your text..."
+      />
+
+      <div class="button-grid">
+
+        <button (click)="convertUppercase()">
+          UPPERCASE
+        </button>
+
+        <button (click)="convertLowercase()">
+          lowercase
+        </button>
+
+        <button (click)="reverseText()">
+          Reverse
+        </button>
+
+        <button (click)="checkLength()">
+          Length
+        </button>
+
+        <button (click)="capitalizeText()">
+          Capitalize
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Number Utility -->
+    <div class="utility-card">
+
+      <div class="card-header">
+        <div class="card-icon">🔢</div>
+
+        <div>
+          <h2>Number Utility</h2>
+          <p>Practice reusable number functions.</p>
+        </div>
+      </div>
+
+      <label>Enter Number</label>
+
+      <input
+        type="number"
+        [(ngModel)]="numberValue"
+        placeholder="Enter number..."
+      />
+
+      <div class="button-grid">
+
+        <button (click)="squareNumber()">
+          Square
+        </button>
+
+        <button (click)="doubleNumber()">
+          Double
+        </button>
+
+        <button (click)="checkEven()">
+          Even / Odd
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Date Utility -->
+    <div class="utility-card">
+
+      <div class="card-header">
+        <div class="card-icon">📅</div>
+
+        <div>
+          <h2>Date & Time Utility</h2>
+          <p>Practice date and time functions.</p>
+        </div>
+      </div>
+
+      <div class="date-buttons">
+
+        <button (click)="showDate()">
+          📅 Current Date
+        </button>
+
+        <button (click)="showTime()">
+          ⏰ Current Time
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Result -->
+    <div class="result-card">
+
+      <div class="result-header">
+
+        <div>
+          <span>UTILITY SERVICE RESULT</span>
+
+          <h2>
+            {{ resultType || 'No Result Yet' }}
+          </h2>
+        </div>
+
+        <button
+          class="clear-button"
+          (click)="clearResult()">
+          Clear
+        </button>
+
+      </div>
+
+      <div class="result-box">
+
+        @if (result) {
+
+          <span class="result-value">
+            {{ result }}
+          </span>
+
+        } @else {
+
+          <span class="empty-result">
+            Select a utility operation to see the result here.
+          </span>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Concept Section -->
+  <div class="concept-section">
+
+    <span class="section-label">WHAT YOU ARE PRACTICING</span>
+
+    <h2>How Utility Service Works</h2>
+
+    <div class="flow">
+
+      <div class="flow-item">
+        <strong>Component</strong>
+        <span>User clicks button</span>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="flow-item">
+        <strong>Service</strong>
+        <span>Utility method executes</span>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="flow-item">
+        <strong>Result</strong>
+        <span>UI displays output</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

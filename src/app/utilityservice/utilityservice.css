@@ -1,0 +1,41 @@
+:host{display:block;font-family:Inter,Arial,sans-serif;color:#172033}
+*{box-sizing:border-box}
+.utility-page{max-width:1200px;margin:auto;padding:28px;background:#f5f7fb;min-height:100vh;border-radius:18px}
+.page-header{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px 32px;background:linear-gradient(120deg,#172554,#4338ca);color:#fff;border-radius:18px;margin-bottom:25px;box-shadow:0 8px 25px #3730a326}
+.section-label{display:inline-block;font-size:11px;font-weight:800;letter-spacing:1.5px;color:#6366f1}
+.page-header .section-label{color:#c7d2fe}
+.page-header h1{font-size:clamp(26px,4vw,36px);margin:12px 0 8px;font-weight:800}
+.page-header p{margin:0;color:#dbeafe;line-height:1.7;font-size:14px}
+.service-icon{width:68px;height:68px;display:grid;place-items:center;flex-shrink:0;background:#ffffff20;border:1px solid #ffffff35;border-radius:18px;font-size:32px}
+.utility-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.utility-card,.result-card,.concept-section{background:#fff;border:1px solid #e5eaf3;border-radius:16px;padding:24px;box-shadow:0 4px 15px #17255408}
+.card-header{display:flex;align-items:center;gap:13px;margin-bottom:23px}
+.card-icon{width:46px;height:46px;display:grid;place-items:center;flex-shrink:0;border-radius:13px;background:#eef2ff;font-size:23px}
+.card-header h2,.result-header h2,.concept-section h2{font-size:19px;margin:0 0 6px;font-weight:750;color:#172033}
+.card-header p{font-size:13px;color:#7b8497;margin:0;line-height:1.5}
+.utility-card label{display:block;font-size:13px;font-weight:700;margin-bottom:9px;color:#374151}
+.utility-card input{width:100%;height:45px;border:1px solid #dbe2ee;border-radius:10px;padding:0 13px;font:inherit;font-size:14px;color:#172033;background:#fbfcff;outline:none;transition:border-color .2s,box-shadow .2s;margin-bottom:17px}
+.utility-card input:focus{border-color:#6366f1;box-shadow:0 0 0 3px #6366f11c;background:#fff}
+.button-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.utility-card button,.date-buttons button{min-height:40px;border:1px solid #dfe5f0;border-radius:9px;padding:10px 12px;background:#f8faff;color:#3730a3;font-size:12px;font-weight:750;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.utility-card button:hover,.date-buttons button:hover{background:#4f46e5;border-color:#4f46e5;color:#fff;transform:translateY(-1px)}
+.date-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.result-card{grid-column:1/-1;background:linear-gradient(135deg,#fff,#f8faff)}
+.result-header{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:17px}
+.result-header>div>span{display:block;font-size:10px;font-weight:800;letter-spacing:1.3px;color:#6366f1;margin-bottom:9px}
+.result-header h2{overflow-wrap:anywhere}
+.clear-button{border:1px solid #fecaca;border-radius:8px;padding:8px 15px;background:#fff1f2;color:#be123c;font-size:12px;font-weight:750;cursor:pointer}
+.clear-button:hover{background:#be123c;color:#fff}
+.result-box{min-height:95px;display:flex;align-items:center;padding:20px;border:1px dashed #c7d2fe;border-radius:12px;background:#eef2ff;overflow-wrap:anywhere;word-break:break-word}
+.result-value{font-size:19px;font-weight:750;color:#3730a3;line-height:1.6}
+.empty-result{font-size:13px;color:#7b8497;line-height:1.7}
+.concept-section{margin-top:22px}
+.concept-section h2{margin:10px 0 23px;font-size:22px}
+.flow{display:flex;align-items:center;justify-content:center;gap:16px}
+.flow-item{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px;padding:17px 12px;text-align:center;border:1px solid #e0e7ff;background:#f8faff;border-radius:12px}
+.flow-item strong{font-size:14px;color:#4338ca}
+.flow-item span{font-size:12px;color:#7b8497;line-height:1.5}
+.arrow{font-size:22px;font-weight:700;color:#818cf8}
+button:focus-visible{outline:3px solid #a5b4fc;outline-offset:3px}
+@media(max-width:700px){.utility-page{padding:14px;border-radius:0}.page-header{padding:23px 19px;border-radius:14px}.utility-grid{grid-template-columns:1fr;gap:15px}.utility-card,.result-card,.concept-section{padding:19px}.result-card{grid-column:auto}.flow{flex-direction:column;gap:9px}.flow-item{width:100%;flex:none}.arrow{transform:rotate(90deg)}}
+@media(max-width:380px){.service-icon{width:48px;height:48px;font-size:24px}.page-header{gap:10px}.date-buttons{grid-template-columns:1fr}.button-grid{gap:8px}.utility-card button{padding:9px 6px;font-size:11px}.result-header h2{font-size:17px}}
